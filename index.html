@@ -14,11 +14,37 @@
 			border: none;
 			overflow: hidden;
 		}
+		#path-info {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			padding: 8px;
+			font-family: monospace;
+			font-size: 14px;
+			z-index: 1000;
+		}
+		iframe {
+			margin-top: 32px;
+			height: calc(100% - 32px);
+		}
 	</style>
 </head>
 
 <body>
-	<iframe src="/src/app.html" title="Simpublish App"></iframe>
+	<div id="path-info"></div>
+	<!-- <iframe src="/src/app.html" title="Simpublish App"></iframe> -->
+	<script>
+		function displayPath() {
+			const pathInfo = document.getElementById('path-info');
+			const absolutePath = window.location.protocol + '//' + window.location.host + window.location.pathname;
+			const serverInfo = `Server: ${window.location.host}`;
+			pathInfo.textContent = `Path: ${absolutePath} | ${serverInfo}`;
+		}
+		window.addEventListener('load', displayPath);
+	</script>
 </body>
 
 </html>
