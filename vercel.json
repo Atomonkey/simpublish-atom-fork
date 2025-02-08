@@ -1,5 +1,4 @@
 {
-  "outputDirectory": "public",
   "functions": {
     "api/article.go": {
       "includeFiles": "_output/**"
