@@ -4,8 +4,8 @@
   "version": "0.6.2",
   "description": "Publish SimpRead output HTMLs to create permalinks",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview"
   },
